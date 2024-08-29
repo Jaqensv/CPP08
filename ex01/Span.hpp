@@ -3,6 +3,8 @@
 #include <iostream>
 #include <vector>
 
+#define INT_MAX 2147483647;
+
 class Span {
 
 public:
@@ -13,8 +15,8 @@ public:
 	Span &operator=(Span const &rhs);
 
 	void addNumber(int value);
-	size_t shortestSpan() const;
-	size_t longestSpan() const;
+	size_t shortestSpan();
+	size_t longestSpan();
 
 	class Exception : public std::exception {
 	public:
@@ -32,5 +34,6 @@ private:
 	Span();
 	unsigned int _N;
 	std::vector<int> _values;
+	//std::vector<int>::iterator _it;
 
 };
