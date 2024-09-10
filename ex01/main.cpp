@@ -6,7 +6,7 @@
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 20:00:58 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/08/29 22:42:56 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/09/10 18:07:07 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,17 @@ int main()
 	{
 		Span sp = Span(5);
 
-		sp.addNumber(91);
-		sp.addNumber(-4);
-		sp.addNumber(17);
-		sp.addNumber(9);
-		sp.addNumber(85);
+		// sp.addNumber(10);
+		// sp.addNumber(-700);
+		// sp.addNumber(80);
+		// sp.addNumber(12);
+		// sp.addNumber(85);
 		
-		std::cout << sp.shortestSpan() << std::endl;
-		std::cout << sp.longestSpan() << std::endl;
+		Span sp2 = Span(10000);
+
+		
+		std::cout << "shortest span : " << sp.shortestSpan() << std::endl;
+		std::cout << "longest span : " << sp.longestSpan() << std::endl;
 	}
 	catch (const std::exception &e)
 	{

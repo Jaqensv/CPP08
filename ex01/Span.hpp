@@ -2,8 +2,10 @@
 
 #include <iostream>
 #include <vector>
+#include <algorithm> // sort()
 
-#define INT_MAX 2147483647;
+#define INT_MAX 2147483647
+#define ROUNDER 10000000
 
 class Span {
 
@@ -15,6 +17,7 @@ public:
 	Span &operator=(Span const &rhs);
 
 	void addNumber(int value);
+	void addPack(unsigned int value_number);
 	size_t shortestSpan();
 	size_t longestSpan();
 
@@ -34,6 +37,5 @@ private:
 	Span();
 	unsigned int _N;
 	std::vector<int> _values;
-	//std::vector<int>::iterator _it;
 
 };
