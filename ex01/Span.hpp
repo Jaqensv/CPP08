@@ -17,7 +17,7 @@ public:
 	Span &operator=(Span const &rhs);
 
 	void addNumber(int value);
-	void addPack(unsigned int value_number);
+	void addPack();
 	size_t shortestSpan();
 	size_t longestSpan();
 

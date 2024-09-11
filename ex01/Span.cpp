@@ -6,7 +6,7 @@
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 17:02:04 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/09/10 18:09:11 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/09/11 10:40:59 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,9 +67,16 @@ size_t Span::longestSpan()
 	return range;
 }
 
-void Span::addPack(unsigned int value_number)
+void Span::addPack()
 {
 	srand(time(0));
+	_values.reserve(_N);
+    std::vector<int>::iterator it = _values.end();
+    for (unsigned int i = 0; i < _N; i++)
+    {
+        it = _values.insert(it, rand());
+        it++;
+    }
 }
 
 Span::Exception::Exception(std::string error) : _error(error) {}
